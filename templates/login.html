@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+{% block content %}
+    <nav class="account-nav">
+        <a href="{{ url_for('index') }}" class=""><i class="bi bi-house"></i></a>
+    </nav>
+    <h5 class="title">Login</h5>
+    <div class="card">
+        <form action="" method="post" class="user--form">
+            {{ form.hidden_tag() }}
+            <div class="field-container">
+                <p>{{ form.email.label }}</p>
+                <p class="">{{ form.email }}</p>
+                <p>{{ form.password.label }}</p>
+                <p class="">{{ form.password }} </p>
+            </div>          
+            <div class="submit">
+                {{ form.submit(class="btn-1") }}
+            </div>
+            
+        </form>
+    </div>
+{% endblock %}
